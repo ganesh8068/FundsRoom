@@ -5,14 +5,14 @@ export default function ChallanPage({ token, userRole }) {
   const [statusFilter, setStatusFilter] = useState("");
   const [selectedChallan, setSelectedChallan] = useState(null);
   const [selectedChallanItems, setSelectedChallanItems] = useState([]);
-  
+
   // Builder States
   const [showBuilder, setShowBuilder] = useState(false);
   const [customers, setCustomers] = useState([]);
   const [products, setProducts] = useState([]);
   const [selectedCustomerId, setSelectedCustomerId] = useState("");
   const [lineItems, setLineItems] = useState([{ productId: "", quantity: 1 }]);
-  
+
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -229,13 +229,12 @@ export default function ChallanPage({ token, userRole }) {
                       <td>{new Date(chal.created_at).toLocaleDateString()}</td>
                       <td>
                         <span
-                          className={`badge ${
-                            chal.status === "Confirmed"
+                          className={`badge ${chal.status === "Confirmed"
                               ? "badge-success"
                               : chal.status === "Cancelled"
-                              ? "badge-error"
-                              : "badge-warning"
-                          }`}
+                                ? "badge-error"
+                                : "badge-warning"
+                            }`}
                         >
                           {chal.status}
                         </span>

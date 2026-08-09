@@ -7,7 +7,7 @@ function App() {
   const [user, setUser] = useState(
     JSON.parse(localStorage.getItem("user") || "null")
   );
-  
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState("");
@@ -30,7 +30,7 @@ function App() {
         setUser(data.user);
         localStorage.setItem("token", data.token);
         localStorage.setItem("user", JSON.stringify(data.user));
-        
+
         // Pick default active tab based on role
         if (data.user.role === "Warehouse") {
           setActiveTab("inventory");

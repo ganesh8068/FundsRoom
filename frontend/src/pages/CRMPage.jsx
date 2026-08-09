@@ -8,11 +8,11 @@ export default function CRMPage({ token, userRole }) {
   const [selectedCustomer, setSelectedCustomer] = useState(null);
   const [notes, setNotes] = useState([]);
   const [newNote, setNewNote] = useState("");
-  
+
   // Modals
   const [showAddModal, setShowAddModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
-  
+
   // Form States
   const [formData, setFormData] = useState({
     name: "",
@@ -256,13 +256,12 @@ export default function CRMPage({ token, userRole }) {
                       </td>
                       <td>
                         <span
-                          className={`badge ${
-                            cust.status === "Active"
+                          className={`badge ${cust.status === "Active"
                               ? "badge-success"
                               : cust.status === "Inactive"
-                              ? "badge-error"
-                              : "badge-warning"
-                          }`}
+                                ? "badge-error"
+                                : "badge-warning"
+                            }`}
                         >
                           {cust.status}
                         </span>

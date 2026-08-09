@@ -7,7 +7,7 @@ export default function InventoryPage({ token, userRole }) {
   const [alertFilter, setAlertFilter] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [movements, setMovements] = useState([]);
-  
+
   // Modals
   const [showAddModal, setShowAddModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
