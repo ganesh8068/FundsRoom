@@ -30,7 +30,7 @@ export default function CRMPage({ token, userRole }) {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
-  const backendUrl = "http://localhost:8000/api";
+  const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
 
   const fetchCustomers = async () => {
     try {

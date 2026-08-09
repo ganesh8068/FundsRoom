@@ -13,7 +13,7 @@ function App() {
   const [loginError, setLoginError] = useState("");
   const [activeTab, setActiveTab] = useState("crm");
 
-  const backendUrl = "http://localhost:8000/api";
+  const backendUrl = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
 
   const handleLogin = async (e) => {
     e.preventDefault();
